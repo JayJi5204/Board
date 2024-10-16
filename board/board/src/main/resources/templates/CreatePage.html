@@ -6,12 +6,12 @@
 </head>
 <body>
 <h1>게시글 작성</h1>
-<form th:action="@{/create}" method="post" th:object="${boardRequestDTO}">
+<form th:action="@{/create}" method="post" role="form" th:object="${boardRequestDTO}">
     <label for="title">제목:</label>
-    <input type="text" id="title" name="title" th:field="*{title}" required/><br/>
+    <input type="text" id="title" th:field="*{title}"/><br/>
 
     <label for="content">내용:</label><br/>
-    <textarea id="content" name="content" th:field="*{content}" required></textarea><br/>
+    <textarea id="content" th:field="*{content}" ></textarea><br/>
 
     <button type="submit">작성</button>
 </form>
