@@ -1,6 +1,6 @@
 package com.example.board.DTO;
 
-import com.example.board.Entity.BoardEntity;
+import com.example.board.entity.BoardEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Getter // getter를 사용하기 위한 어노테이션
 @NoArgsConstructor // default 생성자를 자동으로 생성해주는 어노테이션
-public class BoardResponseDTO { // Service와 Controller로 데이터를 보낼 때 사용하는 객체
+public class BoardResponseDTO { //서버에서 클라이언트에게 게시글 정보를 전달할 때 사용하는 객체
     private Long id; // 게시글 번호
     private String title; // 게시글 제목
     private String content; // 게시글 내용

@@ -1,4 +1,4 @@
-package com.example.board.Entity;
+package com.example.board.entity;
 
 import com.example.board.DTO.BoardRequestDTO;
 import jakarta.persistence.*;
@@ -17,14 +17,14 @@ import java.time.LocalDateTime;
 public class BoardEntity {
 
     @Id // 기본키 할당 어노테이션
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "board_id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "board_id") //OracleDB는 SEQUENCE를 사용한다.
     @SequenceGenerator(name = "board_id", sequenceName = "BOARD_ID", allocationSize = 1)
     private Long id; // 글 번호
 
-    @Column(nullable = false)
+    @Column(nullable = false) // 글 제목은 null이 되서는 안된다.
     private String title; // 글 제목
 
-    @Column(nullable = false)
+    @Column(nullable = false) // 글 내용은 null이 되서는 안된다.
     private String content; // 글 내용
 
     @CreatedDate // 생성 일자가 자동으로 생성되게 하는 어노테이션
@@ -38,8 +38,9 @@ public class BoardEntity {
         this.title = boardRequestDTO.getTitle();
         this.content = boardRequestDTO.getContent();
     }
-    public void update(String title, String content) {
-        this.title = title;
-        this.content = content;
+
+    public void update(BoardRequestDTO boardRequestDTO) {
+        this.title = boardRequestDTO.getTitle();
+        this.content = boardRequestDTO.getContent();
     }
 }

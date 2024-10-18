@@ -1,10 +1,11 @@
 package com.example.board.DTO;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Getter
+@Data // Getter와 Setter를 사용하기 위한 어노테이션
 @NoArgsConstructor
+
 public class BoardRequestDTO {
     private String title; // 게시글 제목
     private String content; // 게시글 내용
