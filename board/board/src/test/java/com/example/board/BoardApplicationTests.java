@@ -11,6 +11,7 @@ class BoardApplicationTests {
     @Autowired
     private BoardService boardService;
 
+    // 게시글 300개 등록 테스트
     @Test
     void contextLoads() {
         for (int i = 0; i < 300; i++) {

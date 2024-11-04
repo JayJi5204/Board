@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@Controller
-@RequiredArgsConstructor
+@Controller // 이 클래스가 Controller 영역이라는걸 알려주는 어노테이션
+@RequiredArgsConstructor // 자동으로 생성자 주입에 대한 코드를 생성
 public class BoardController {
     private final BoardService boardService;
 
