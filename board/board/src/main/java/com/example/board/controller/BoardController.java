@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@Controller
+@Controller // 이 클래스가 Controller 영역이라는 어노테이션
 @RequiredArgsConstructor
 public class BoardController {
     private final BoardService boardService;

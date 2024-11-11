@@ -15,6 +15,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class BoardService {
 
+
     private final BoardRepository boardRepository;
 
     // 게시글 생성 기능
